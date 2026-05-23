@@ -1,0 +1,25 @@
+arr=[11,22,33,44,55,66,77,88]
+print(arr)
+
+for i in range(len(arr)):
+    print(arr[i],end=" ")
+    
+for x in arr:
+    print(x,end=" ")
+    
+#  
+arr=[11,22,33,44,55,66,77,88]
+print(arr[3])
+print(arr[-1])
+
+#slicing
+arr=[11,22,33,44,55,66,77,88]
+print(arr[1:5])
+print(arr[4:6])
+print(arr[:6])
+print(arr[4:])
+print(arr[:])
+print(arr[::1])
+print(arr[::2])
+print(arr[::3])
+print(arr[::-1])

@@ -1,0 +1,8 @@
+list1 = [1, 3, 5]
+list2 = [2, 4, 6]
+
+result = list1 + list2
+
+result.sort()
+
+print(result)

@@ -1,44 +1,14 @@
-class MergeSort:
-    def merge_sort(self, arr):
+from itertools import permutations
 
-        if len(arr) > 1:
-            mid = len(arr) // 2
+a,b = 459,500
 
-            l = arr[:mid]
-            r = arr[mid:]
+ans=[]
 
-            self.merge_sort(l)
-            self.merge_sort(r)
-
-            i = j = k = 0
-
-            while i < len(l) and j < len(r):
-
-                if l[i] < r[j]:
-                    arr[k] = l[i]
-                    i += 1
-                else:
-                    arr[k] = r[j]
-                    j += 1
-
-                k += 1
-
-            while i < len(l):
-                arr[k] = l[i]
-                i += 1
-                k += 1
-
-            while j < len(r):
-                arr[k] = r[j]
-                j += 1
-                k += 1
-
-
-if __name__ == '__main__':
-    obj = MergeSort()
-
-    arr = [1, 4, 5, 2, 3, 6, 5]
-
-    obj.merge_sort(arr)
-
-    print(arr)
+for i in permutations(str(a)):
+    n=int(input("".join(i)))
+    if n>int(b):
+        ans.append(n)
+if len(ans)==0:
+    print(-1)
+else:
+    print(min(ans))
